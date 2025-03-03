@@ -391,7 +391,7 @@ function App() {
                     Designed and configured interactive cybersecurity lab
                     environments while guiding students through hands-on
                     security exercises in penetration testing, network analysis,
-                    and digital forensics using industry-standard tools.1
+                    and digital forensics using industry-standard tools.
                   </p>
                 </div>
                 <div className="md:w-1/2 md:pl-10"></div>
