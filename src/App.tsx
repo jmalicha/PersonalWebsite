@@ -474,7 +474,7 @@ function App() {
             {/* Certificate 1 */}
             <div className="bg-gray-800 p-6 rounded-lg border-l-4 border-green-500 hover:scale-105 transition-transform duration-300">
               <img
-                src="/images/google-cybersecurity-cert.png"
+                src="/images/googlecybersec-cert.png"
                 alt="Google Cybersecurity Certificate"
                 className="w-full h-40 object-cover rounded-md mb-4"
               />
@@ -493,7 +493,7 @@ function App() {
             {/* Certificate 2 */}
             <div className="bg-gray-800 p-6 rounded-lg border-l-4 border-green-500 hover:scale-105 transition-transform duration-300">
               <img
-                src="/images/isc2-cc-cert.png"
+                src="/images/cc-cert.png"
                 alt="Certified in Cybersecurity Certificate"
                 className="w-full h-40 object-cover rounded-md mb-4"
               />
@@ -511,7 +511,7 @@ function App() {
             {/* Certificate 3 */}
             <div className="bg-gray-800 p-6 rounded-lg border-l-4 border-green-500 hover:scale-105 transition-transform duration-300">
               <img
-                src="/images/splunk-cert.png"
+                src="/images/splunk.png"
                 alt="Splunk Security Operation & Defense Analyst"
                 className="w-full h-40 object-cover rounded-md mb-4"
               />
@@ -531,7 +531,7 @@ function App() {
             {/* Certificate 4 */}
             <div className="bg-gray-800 p-6 rounded-lg border-l-4 border-green-500 hover:scale-105 transition-transform duration-300">
               <img
-                src="/images/ec-council-wireshark-cert.png"
+                src="/images/wireshark.png"
                 alt="Practical Wireshark Certificate"
                 className="w-full h-40 object-cover rounded-md mb-4"
               />
