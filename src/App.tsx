@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import PortfolioSection from './pages/PortfolioSection.tsx';
 import {
   CircleUser,
   Mail,
@@ -10,7 +11,9 @@ import {
 } from 'lucide-react';
 import ContactForm from "./pages/ContactForm.tsx";
 import emailjs from "@emailjs/browser";
-
+import SeeMoreCertificates from './pages/SeeMoreCerts.tsx';
+import SeeMoreCerts from './pages/SeeMoreCerts.tsx';
+import Certificates from './pages/CertificatesPage.tsx';
 
 function App() {
   // Create refs for each section to enable smooth scrolling
@@ -31,6 +34,7 @@ function App() {
 { behavior: 'smooth' });
     }
   };
+
 
   return (
     <div className="min-h-screen bg-gray-800 text-white">
@@ -53,17 +57,16 @@ function App() {
               HOME
             </button>
             <button
-              onClick={() => scrollToSection(skillsRef)}
-              className="text-gray-300 hover:text-green-500 transition-colors duration-300"
-            >
-              SKILLS
-            </button>
-    
-            <button
               onClick={() => scrollToSection(educationRef)}
               className="text-gray-300 hover:text-green-500 transition-colors duration-300"
             >
               EDUCATION
+            </button>
+            <button
+              onClick={() => scrollToSection(skillsRef)}
+              className="text-gray-300 hover:text-green-500 transition-colors duration-300"
+            >
+              SKILLS
             </button>
             <button
               onClick={() => scrollToSection(experienceRef)}
@@ -132,23 +135,26 @@ function App() {
               <div className="text-white">I'M JOYCE MALICHA</div>
             </div>
             <div className="text-xl text-gray-300 mb-8">
-              CYBERSECURITY ANALYST
+            CYBERSECURITY & AI SPECIALIST
             </div>
             <p className="text-gray-400 mb-10">
-              A cybersecurity professional transitioning from web development
-              and IT support, with expertise in data security, threat analysis,
-              and security operations. My background in frontend development,
-              UI/UX, and ICT support gives me a unique edge in securing digital
-              environments. Passionate about SOC operations, digital forensics,
-              and ethical hacking, I am committed to protecting systems,
-              detecting threats, and strengthening security defenses.
+            Curiosity fuels my passion for technology, driving me to 
+            continuously explore and adapt in the dynamic worlds of 
+            cybersecurity and artificial intelligence. With a strong
+             foundation in IT support and a keen understanding of 
+             machine learning models and security principles, 
+             I’m dedicated to bridging the gap between emerging 
+             AI capabilities and robust security practices. Always eager 
+             to learn and grow, I bring a proactive mindset and hands-on 
+             experience that empower me to contribute effectively to any 
+             team focused on securing the future of technology.
             </p>
           </div>
 
           {/* Download Resume Button */}
 
           <a
-            href="https://drive.google.com/file/d/1BBMe5s74nnfT3OGJ77lcM8Co3hIeXdYh/view?usp=sharing"
+            href="https://drive.google.com/file/d/1th_VQDD1x-ZS1mMaQqQmOPqZpEMF-FiB/view?usp=sharing"
             download="Joyce_Malicha_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -159,204 +165,204 @@ function App() {
           </a>
         </div>
       </section>
-      <section ref={skillsRef}id="skills" className="py-20 bg-gray-900 text-white">
-        <div className="container mx-auto px-6">
-          {/* Section Title */}
-          <h2 className="text-4xl font-bold text-center text-white-500 mb-12">
-            Skills
-          </h2>
+      
+       {/* Education Section */}
+<section
+  ref={educationRef}
+  className="py-20 bg-gray-900 bg-cover bg-center relative"
+  style={{
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')",
+  }}
+>
+  <div className="absolute inset-0 bg-gray-900 opacity-80"></div>
+  <div className="container mx-auto px-6 relative z-10">
+    <div className="text-5xl font-bold mb-16 text-white text-center">
+      <span className="text-gray-400"></span> EDUCATION
+    </div>
 
-          {/* Skills Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-            {/* Security Operations & Threat Analysis */}
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
-              <h3 className="text-2xl font-semibold text-green-400 mb-4 flex justify-center items-center">
-                <i className="fas fa-shield-alt text-green-400 text-3xl mr-2"></i>{' '}
-                Security Operations & Threat Analysis
-              </h3>
-              <p className="text-gray-300">
-                Threat Hunting, SIEM Monitoring (Splunk, ELK, QRadar), Incident
-                Response, Cyber Threat Intelligence (CTI), Log Analysis,
-                Endpoint Detection & Response (EDR).
-              </p>
-            </div>
+    <div className="relative">
+      {/* Timeline line */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-green-500"></div>
 
-            {/* Programming & Scripting */}
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
-              <h3 className="text-2xl font-semibold text-green-400 mb-4 flex justify-center items-center">
-                <i className="fas fa-code text-green-400 text-3xl mr-2"></i>{' '}
-                Programming & Scripting
-              </h3>
-              <p className="text-gray-300">
-                Python, JavaScript, Bash, PowerShell, SQL, Security Automation,
-                API Security, Secure Coding Practices.
-              </p>
-            </div>
+      {/* Education 1 */}
+      <div className="mb-24 relative">
+        <div className="absolute left-1/2 transform -translate-x-1/2 -mt-2 w-4 h-4 rounded-full bg-green-500"></div>
+        <div className="flex flex-col md:flex-row">
+          <div className="md:w-1/2 pr-10 md:text-right mb-10 md:mb-0">
+            <div className="text-green-500 mb-2">2024-2025</div>
+            <h3 className="text-2xl font-bold mb-2">
+              GRAND VALLEY STATE UNIVERSITY
+            </h3>
+            <h4 className="text-xl mb-4">
+              Master of Science in Cybersecurity
+            </h4>
+            <p className="text-gray-300 mb-2">
+              Specialized in cybersecurity operations with a focus on
+              threat detection, incident response, and data protection for
+              secure digital environments.
+            </p>
+            <div className="text-green-500 mb-2">GPA: 3.83</div>
+          </div>
+          <div className="md:w-1/2 md:pl-10"></div>
+        </div>
+      </div>
 
-            {/* Security Tools & Technologies */}
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
-              <h3 className="text-2xl font-semibold text-green-400 mb-4 flex justify-center items-center">
-                <i className="fas fa-tools text-green-400 text-3xl mr-2"></i>{' '}
-                Security Tools
-              </h3>
-              <p className="text-gray-300">
-                Splunk, Wireshark, Metasploit, Nmap, Nessus, OpenVAS, Snort,
-                Suricata, Autopsy, Volatility, Burp Suite, Cuckoo Sandbox,
-                CyberChef.
-              </p>
-            </div>
-
-            {/* Web Security */}
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
-              <h3 className="text-2xl font-semibold text-green-400 mb-4 flex justify-center items-center">
-                <i className="fas fa-lock text-green-400 text-3xl mr-2"></i> Web
-                Security
-              </h3>
-              <p className="text-gray-300">
-                OWASP Top 10, Secure Authentication (JWT, OAuth), Web
-                Application Firewalls (WAF), Input Validation & Sanitization,
-                Content Security Policy (CSP), HTTPS & TLS, Cross-Site Scripting
-                (XSS) & SQL Injection Prevention, Security Headers.
-              </p>
-            </div>
-
-            {/* Network & System Security */}
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
-              <h3 className="text-2xl font-semibold text-green-400 mb-4 flex justify-center items-center">
-                <i className="fas fa-network-wired text-green-400 text-3xl mr-2"></i>{' '}
-                Network & System Security
-              </h3>
-              <p className="text-gray-300">
-                Firewalls (pfSense, Cisco ASA, OPNsense), Network Monitoring
-                (Wireshark, Zeek), Intrusion Detection & Prevention (Snort,
-                Suricata), SIEM (Splunk, ELK, QRadar), VPNs, Endpoint Security,
-                DDoS Mitigation.
-              </p>
-            </div>
-
-            {/* Cloud Security & DevOps */}
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
-              <h3 className="text-2xl font-semibold text-green-400 mb-4 flex justify-center items-center">
-                <i className="fas fa-cloud text-green-400 text-3xl mr-2"></i>{' '}
-                Cloud Security & DevOps
-              </h3>
-              <p className="text-gray-300">
-                AWS Security Hub, Azure Security Center, Google Security Command
-                Center, Docker, Kubernetes, CI/CD Security, Terraform,
-                Infrastructure as Code (IaC), Cloud Identity & Access Management
-                (IAM), Security Automation.
-              </p>
-            </div>
-
-            {/* Digital Forensics & Incident Response */}
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
-              <h3 className="text-2xl font-semibold text-green-400 mb-4 flex justify-center items-center">
-                <i className="fas fa-user-secret text-green-400 text-3xl mr-2"></i>{' '}
-                Digital Forensics & IR
-              </h3>
-              <p className="text-gray-300">
-                Disk & Memory Forensics (Autopsy, FTK Imager, Volatility),
-                Malware Analysis (Cuckoo Sandbox), Threat Intelligence, Incident
-                Handling, Log Analysis (Splunk, ELK).
-              </p>
-            </div>
-
-            {/* Open Source Intelligence (OSINT) */}
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
-              <h3 className="text-2xl font-semibold text-green-400 mb-4 flex justify-center items-center">
-                <i className="fas fa-search text-green-400 text-3xl mr-2"></i>{' '}
-                Open Source Intelligence (OSINT)
-              </h3>
-              <p className="text-gray-300">
-                Maltego, theHarvester, Shodan, Recon-ng, SpiderFoot, WHOIS
-                Lookups, Google Dorking, Social Media Recon, Domain & IP
-                Enumeration.
-              </p>
-            </div>
-
-            {/* Soft Skills */}
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
-              <h3 className="text-2xl font-semibold text-green-400 mb-4 flex justify-center items-center">
-                <i className="fas fa-user-tie text-green-400 text-3xl mr-2"></i>{' '}
-                Soft Skills
-              </h3>
-              <p className="text-gray-300">
-                Critical Thinking, Incident Response Decision-Making, Security
-                Awareness & Risk Management, Leadership, Communication &
-                Documentation, Ethical Mindset, Continuous Learning, Team
-                Collaboration.
-              </p>
-            </div>
+      {/* Education 2 */}
+      <div className="mb-24 relative">
+        <div className="absolute left-1/2 transform -translate-x-1/2 -mt-2 w-4 h-4 rounded-full bg-green-500"></div>
+        <div className="flex flex-col md:flex-row">
+          <div className="md:w-1/2 pr-10"></div>
+          <div className="md:w-1/2 md:pl-10">
+            <div className="text-green-500 mb-2">2016-2020</div>
+            <h3 className="text-2xl font-bold mb-2">
+              CATHOLIC UNIVERSITY OF EASTERN AFRICA
+            </h3>
+            <h4 className="text-xl mb-4">
+              Bachelor of Science in Computer Science
+            </h4>
+            <p className="text-gray-300 mb-2">
+              Specialized in software development and system security with
+              a focus on designing efficient algorithms, optimizing system
+              performance, and building secure digital solutions.
+            </p>
+            <div className="text-green-500 mb-2">GPA: 3.15</div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-      {/* Education Section */}
-      <section
-        ref={educationRef}
-        className="py-20 bg-gray-900 bg-cover bg-center relative"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')",
-        }}
-      >
-        <div className="absolute inset-0 bg-gray-900 opacity-80"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-5xl font-bold mb-16 text-white text-center">
-            <span className="text-gray-400"></span> EDUCATION
-          </div>
 
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-green-500"></div>
+      <section ref={skillsRef} id="skills" className="py-20 bg-gray-900 text-white">
+  <div className="container mx-auto px-6">
+    <h2 className="text-4xl font-bold text-center text-white mb-12">
+      Skills
+    </h2>
 
-            {/* Education 1 */}
-            <div className="mb-24 relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 -mt-2 w-4 h-4 rounded-full bg-green-500"></div>
-              <div className="flex flex-col md:flex-row">
-                <div className="md:w-1/2 pr-10 md:text-right mb-10 md:mb-0">
-                  <div className="text-green-500 mb-2">2024-2025</div>
-                  <h3 className="text-2xl font-bold mb-2">
-                    GRAND VALLEY STATE UNIVERSITY
-                  </h3>
-                  <h4 className="text-xl mb-4">
-                    Master of Science in Cybersecurity
-                  </h4>
-                  <p className="text-gray-300">
-                    Specialized in cybersecurity operations with a focus on
-                    threat detection, incident response, and data protection for
-                    secure digital environments.
-                  </p>
-                  {/* <div className="text-teal-500 mb-2">GPA: 3.75</div> */}
-                </div>
-                <div className="md:w-1/2 md:pl-10"></div>
-              </div>
-            </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
 
-            {/* Education 2 */}
-            <div className="mb-24 relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 -mt-2 w-4 h-4 rounded-full bg-green-500"></div>
-              <div className="flex flex-col md:flex-row">
-                <div className="md:w-1/2 pr-10"></div>
-                <div className="md:w-1/2 md:pl-10">
-                  <div className="text-green-500 mb-2">2016-2020</div>
-                  <h3 className="text-2xl font-bold mb-2">
-                    CATHOLIC UNIVERSITY OF EASTERN AFRICA
-                  </h3>
-                  <h4 className="text-xl mb-4">
-                    Bachelor of Science in Computer Science
-                  </h4>
-                  <p className="text-gray-300">
-                    Specialized in software development and system security with
-                    a focus on designing efficient algorithms, optimizing system
-                    performance, and building secure digital solutions.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Cybersecurity Operations & Forensics */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+        <h3 className="text-2xl font-semibold text-green-400 mb-4">
+          🛡️ Cybersecurity Operations & Forensics
+        </h3>
+        <p className="text-gray-300 mb-1">
+          Threat Hunting, Incident Response, SIEM, EDR, CTI, Disk & Memory Forensics, Malware Analysis.
+        </p>
+        <p className="text-gray-300">
+          Tools: Splunk, ELK, QRadar, CrowdStrike, SentinelOne, Autopsy, Volatility, Cuckoo Sandbox.
+        </p>
+      </div>
+
+      {/* Programming & Scripting */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+        <h3 className="text-2xl font-semibold text-green-400 mb-4">
+          💻 Programming & Scripting
+        </h3>
+        <p className="text-gray-300 mb-1">
+          Python, JavaScript, TypeScript, Bash, PowerShell, C++.
+        </p>
+        <p className="text-gray-300">
+          Automation, API Dev, Secure Coding.
+        </p>
+      </div>
+
+      {/* Operating Systems & IT Admin */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+        <h3 className="text-2xl font-semibold text-green-400 mb-4">
+          🖥️ OS & IT Administration
+        </h3>
+        <p className="text-gray-300 mb-1">
+          Windows, Linux (Kali), macOS.
+        </p>
+        <p className="text-gray-300">
+        Microsoft Entra ID, Active Directory, Microsoft Office 365, Group Policy, System Imaging & Updates, Troubleshooting.
+        </p>
+      </div>
+
+      {/* Web Application Security */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+        <h3 className="text-2xl font-semibold text-green-400 mb-4">
+          🔒 Web Application Security
+        </h3>
+        <p className="text-gray-300 mb-1">
+          OWASP Top 10, WAFs, Secure Auth (JWT, OAuth), Input Validation, HTTPS/TLS, API Security.
+        </p>
+        <p className="text-gray-300">
+          Tools: Burp Suite, ZAP Proxy, Postman.
+        </p>
+      </div>
+
+      {/* Network Security */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+        <h3 className="text-2xl font-semibold text-green-400 mb-4">
+          🌐 Network Security
+        </h3>
+        <p className="text-gray-300 mb-1">
+          Firewalls, IDS/IPS, VPNs, Network Monitoring, DDoS Mitigation.
+        </p>
+        <p className="text-gray-300">
+          Tools: pfSense, Cisco ASA, Wireshark, Snort, Suricata, Zeek.
+        </p>
+      </div>
+
+      {/* Cloud Security & DevOps */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+        <h3 className="text-2xl font-semibold text-green-400 mb-4">
+          ☁️ Cloud Security & DevOps
+        </h3>
+        <p className="text-gray-300 mb-1">
+          AWS Security Hub, Azure Security Center, Google SCC, Docker, Kubernetes, CI/CD, IaC, Cloud IAM.
+        </p>
+        <p className="text-gray-300">
+          Tools: Terraform, GitHub Actions.
+        </p>
+      </div>
+
+      {/* AI & Machine Learning */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+        <h3 className="text-2xl font-semibold text-green-400 mb-4">
+          🤖 AI & Machine Learning
+        </h3>
+        <p className="text-gray-300 mb-1">
+          NLP, LLM Orchestration, Agents, Prompt Engineering, Model Training & Tuning.
+        </p>
+        <p className="text-gray-300">
+          Tools: TensorFlow, LangChain, n8n, OpenAI API, Azure AI, AWS AI Services.
+        </p>
+      </div>
+
+      {/* OSINT */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+        <h3 className="text-2xl font-semibold text-green-400 mb-4">
+          🔍 Open Source Intelligence (OSINT)
+        </h3>
+        <p className="text-gray-300 mb-1">
+          Recon, Footprinting, Social Engineering, Dark Web Monitoring.
+        </p>
+        <p className="text-gray-300">
+          Tools: Maltego, theHarvester, Shodan, SpiderFoot.
+        </p>
+      </div>
+
+      {/* Professional Strengths */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+        <h3 className="text-2xl font-semibold text-green-400 mb-4">
+          🎯 Professional Strengths
+        </h3>
+        <p className="text-gray-300">
+          Critical Thinking, Incident Handling, Communication, Leadership, Teamwork, Ethical Hacking Mindset.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    
 
       {/* Experience Section */}
       <section
@@ -460,261 +466,94 @@ function App() {
       </section>
 
       {/* Certificates Section */}
-      <section ref={certificatesRef} className="py-20 bg-gray-900">
-        <div className="container mx-auto px-6">
-          {/* Section Title */}
-          <h2 className="text-4xl font-bold text-center text-white-500 mb-4">
-            CERTIFICATES
-          </h2>
-          <p className="text-xl mb-8 text-white text-center">
-            <span className="text-green-500"><button>SEE MORE &gt;</button></span>
-          </p>
-          {/* Certificates Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
-            {/* Certificate 1 */}
-            <div className="bg-gray-800 p-6 rounded-lg border-l-4 border-green-500 hover:scale-105 transition-transform duration-300">
-              <img
-                src="/googlecybersec-cert.png"
-                alt="Google Cybersecurity Certificate"
-                className="w-full h-40 object-cover rounded-md mb-4"
-              />
-              <h3 className="text-xl font-bold">
-                Google Cybersecurity Professional Certificate
-              </h3>
-              <span className="text-green-500">2024</span>
-              <p className="text-gray-400 mb-4">Google</p>
-              <p className="text-gray-300">
-                Comprehensive certification covering cybersecurity fundamentals,
-                network security, incident response, risk management, and
-                hands-on threat detection using industry-standard tools.
-              </p>
-            </div>
-
-            {/* Certificate 2 */}
-            <div className="bg-gray-800 p-6 rounded-lg border-l-4 border-green-500 hover:scale-105 transition-transform duration-300">
-              <img
-                src="/cc-cert.png"
-                alt="Certified in Cybersecurity Certificate"
-                className="w-full h-40 object-cover rounded-md mb-4"
-              />
-              <h3 className="text-xl font-bold">Certified in Cybersecurity</h3>
-              <span className="text-green-500">2024</span>
-              <p className="text-gray-400 mb-4">ISC2</p>
-              <p className="text-gray-300">
-                Foundational certification covering cybersecurity principles,
-                network security, risk management, incident response, and
-                security operations, validating core knowledge for entry-level
-                cybersecurity roles.
-              </p>
-            </div>
-
-            {/* Certificate 3 */}
-            <div className="bg-gray-800 p-6 rounded-lg border-l-4 border-green-500 hover:scale-105 transition-transform duration-300">
-              <img
-                src="/splunk.png"
-                alt="Splunk Security Operation & Defense Analyst"
-                className="w-full h-40 object-cover rounded-md mb-4"
-              />
-              <h3 className="text-xl font-bold">
-                Security Operation & Defense Analyst
-              </h3>
-              <span className="text-green-500">2024</span>
-              <p className="text-gray-400 mb-4">Splunk</p>
-              <p className="text-gray-300">
-                Certification covering security operations, SIEM fundamentals,
-                threat detection, log analysis, incident response, and hands-on
-                experience using Splunk for security monitoring and defense
-                strategies.
-              </p>
-            </div>
-
-            {/* Certificate 4 */}
-            <div className="bg-gray-800 p-6 rounded-lg border-l-4 border-green-500 hover:scale-105 transition-transform duration-300">
-              <img
-                src="/wireshark.png"
-                alt="Practical Wireshark Certificate"
-                className="w-full h-40 object-cover rounded-md mb-4"
-              />
-              <h3 className="text-xl font-bold">Practical Wireshark</h3>
-              <span className="text-green-500">2024</span>
-              <p className="text-gray-400 mb-4">EC Council</p>
-              <p className="text-gray-300">
-                Hands-on certification focused on network traffic analysis,
-                packet inspection, and threat detection using Wireshark to
-                identify security risks and troubleshoot network
-                vulnerabilities.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Section */}
-      <section ref={portfolioRef} className="py-20 bg-gray-800">
-        <div className="container mx-auto px-6">
-          <div className="text-5xl font-bold mb-4 text-white text-center">
-            <span className="text-gray-400"></span> Projects
-          </div>
-          <div className="text-xl mb-16 text-white text-center">
-            MY LATEST WORK.{' '}
-            <span className="text-green-500">SEE MORE &gt;</span>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Project 1 */}
-            <div className="group relative overflow-hidden rounded-lg">
-              <img
-                src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80"
-                alt="Project 1"
-                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end p-6 opacity-100 transition-opacity duration-300">
-                <h3 className="text-white text-2xl font-bold">PROJECT 01</h3>
-              </div>
-              <div className="absolute inset-0 bg-green-500 bg-opacity-90 flex flex-col justify-center items-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="text-white text-2xl font-bold mb-4">
-                  E-Commerce Website
-                </h3>
-                <p className="text-white text-center mb-6">
-                  A modern e-commerce platform with seamless user experience and
-                  secure payment processing.
-                </p>
-                <button className="border-2 border-white text-white hover:bg-white hover:text-green-500 transition-colors duration-300 py-2 px-4 rounded-md">
-                  VIEW PROJECT
-                </button>
-              </div>
-            </div>
-
-            {/* Project 2 */}
-            <div className="group relative overflow-hidden rounded-lg">
-              <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80"
-                alt="Project 2"
-                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end p-6 opacity-100 transition-opacity duration-300">
-                <h3 className="text-white text-2xl font-bold">PROJECT 02</h3>
-              </div>
-              <div className="absolute inset-0 bg-green-500 bg-opacity-90 flex flex-col justify-center items-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="text-white text-2xl font-bold mb-4">
-                  Mobile Banking App
-                </h3>
-                <p className="text-white text-center mb-6">
-                  A secure and intuitive mobile banking application with
-                  real-time transaction tracking.
-                </p>
-                <button className="border-2 border-white text-white hover:bg-white hover:text-green-500 transition-colors duration-300 py-2 px-4 rounded-md">
-                  VIEW PROJECT
-                </button>
-              </div>
-            </div>
-
-            {/* Project 3 */}
-            <div className="group relative overflow-hidden rounded-lg">
-              <img
-                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                alt="Project 3"
-                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end p-6 opacity-100 transition-opacity duration-300">
-                <h3 className="text-white text-2xl font-bold">PROJECT 03</h3>
-              </div>
-              <div className="absolute inset-0 bg-green-500 bg-opacity-90 flex flex-col justify-center items-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="text-white text-2xl font-bold mb-4">
-                  SaaS Dashboard
-                </h3>
-                <p className="text-white text-center mb-6">
-                  A comprehensive analytics dashboard for SaaS businesses with
-                  data visualization tools.
-                </p>
-                <button className="border-2 border-white text-white hover:bg-white hover:text-green-500 transition-colors duration-300 py-2 px-4 rounded-md">
-                  VIEW PROJECT
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <section ref={certificatesRef}><>
+      <Certificates/>
+    </></section>
+      
+<section ref = {portfolioRef}><>
+      {/* other sections */}
+      <PortfolioSection />
+      {/* other sections */}
+    </>
+</section>
+    
       {/* Blogs Section */}
-      <section ref={blogsRef} className="py-20 bg-gray-900">
-        <div className="container mx-auto px-6">
-          <div className="text-5xl font-bold mb-4 text-white text-center">
-            <span className="text-gray-400"></span> BLOGS
-          </div>
-          <div className="text-xl mb-16 text-white text-center">
-            INSIGHTS & THOUGHTS ON DESIGN
-          </div>
+<section ref={blogsRef} className="py-20 bg-gray-900">
+  <div className="container mx-auto px-6">
+    <div className="text-5xl font-bold mb-4 text-white text-center">
+      BLOGS
+    </div>
+    <div className="text-xl mb-16 text-white text-center">
+      INSIGHTS & THOUGHTS ON CYBERSECURITY, AI & ML
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Blog 1 */}
-            <div className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <img
-                src="https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                alt="Blog 1"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <div className="text-green-500 mb-2">April 15, 2023</div>
-                <h3 className="text-xl font-bold mb-3">
-                  The Future of UX Design in 2023
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  Exploring emerging trends and technologies that are shaping
-                  the future of user experience design.
-                </p>
-                <a href="#" className="text-green-500 hover:underline">
-                  Read More →
-                </a>
-              </div>
-            </div>
-
-            {/* Blog 2 */}
-            <div className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <img
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                alt="Blog 2"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <div className="text-green-500 mb-2">March 22, 2023</div>
-                <h3 className="text-xl font-bold mb-3">
-                  Designing for Accessibility: A Guide
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  Best practices for creating inclusive digital experiences that
-                  work for users of all abilities.
-                </p>
-                <a href="#" className="text-green-500 hover:underline">
-                  Read More →
-                </a>
-              </div>
-            </div>
-
-            {/* Blog 3 */}
-            <div className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <img
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                alt="Blog 3"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <div className="text-green-500 mb-2">February 8, 2023</div>
-                <h3 className="text-xl font-bold mb-3">
-                  The Psychology of Color in UI Design
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  How color choices influence user perception and behavior in
-                  digital interfaces.
-                </p>
-                <a href="#" className="text-green-500 hover:underline">
-                  Read More →
-                </a>
-              </div>
-            </div>
-          </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Blog 1 */}
+      <div className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+        <img
+          src="src/images/deepfake.jpg"
+          alt="Deepfake Detection"
+          className="w-full h-48 object-cover"
+        />
+        <div className="p-6">
+          <div className="text-green-500 mb-2">July 10, 2024</div>
+          <h3 className="text-xl font-bold mb-3">
+            Understanding Deepfake Detection
+          </h3>
+          <p className="text-gray-300 mb-4">
+            A look at how AI is used to detect manipulated media, the challenges of deepfake forensics, and why this matters for digital trust.
+          </p>
+          <a href="#" className="text-green-500 hover:underline">
+            Read More →
+          </a>
         </div>
-      </section>
+      </div>
+
+      {/* Blog 2 */}
+      <div className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+        <img
+          src="src/images/cyber-threats.jpeg"
+          alt="Cyber Threat Trends"
+          className="w-full h-48 object-cover"
+        />
+        <div className="p-6">
+          <div className="text-green-500 mb-2">June 18, 2024</div>
+          <h3 className="text-xl font-bold mb-3">
+            Latest Trends in Cyber Threats
+          </h3>
+          <p className="text-gray-300 mb-4">
+            An overview of modern cybersecurity threats, from phishing to ransomware, and insights on how organizations can strengthen defenses.
+          </p>
+          <a href="#" className="text-green-500 hover:underline">
+            Read More →
+          </a>
+        </div>
+      </div>
+
+      {/* Blog 3 */}
+      <div className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+        <img
+          src="src/images/AI:ML.jpeg"
+          alt="Machine Learning Ethics"
+          className="w-full h-48 object-cover"
+        />
+        <div className="p-6">
+          <div className="text-green-500 mb-2">May 25, 2025</div>
+          <h3 className="text-xl font-bold mb-3">
+            The Ethics of AI & Machine Learning
+          </h3>
+          <p className="text-gray-300 mb-4">
+            Thoughts on responsible AI development, bias in ML models, and the importance of fairness and accountability in AI systems.
+          </p>
+          <a href="#" className="text-green-500 hover:underline">
+            Read More →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Contact Section */}
       <section ref={contactRef} className="py-2 bg-gray-900">

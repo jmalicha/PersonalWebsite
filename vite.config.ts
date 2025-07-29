@@ -10,5 +10,6 @@ export default defineConfig({
     hmr: {
       overlay: false, // Disables the Vite overlay
     },
+
   },
 });
