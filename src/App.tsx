@@ -154,7 +154,7 @@ function App() {
           {/* Download Resume Button */}
 
           <a
-            href="https://drive.google.com/file/d/1th_VQDD1x-ZS1mMaQqQmOPqZpEMF-FiB/view?usp=sharing"
+            href="https://drive.google.com/file/d/1fm1H_oJVp8vJnny3yCtnCus-3DHe2Aly/view?usp=sharing"
             download="Joyce_Malicha_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
