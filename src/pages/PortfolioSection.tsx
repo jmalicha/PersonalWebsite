@@ -9,7 +9,7 @@ export default function PortfolioSection() {
             title: "IoT Monitoring Station",
             description: "A full-stack IoT system for collecting, processing, and visualizing sensor data using MQTT, Docker, InfluxDB, and Grafana.",
             image:
-              "src/images/IoT.png",
+              "/IoT.png",
             details: `Welcome to the IoT Monitoring Station project repository.
     The goal is to design and deploy a complete IoT system that collects, processes, and visualizes live sensor data.
 
