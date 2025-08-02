@@ -17,7 +17,7 @@ export default function Certificates() {
 
 const certificates = [
   {
-    img: "public/googleCybersec-cert.png",
+    img: "./googleCybersec-cert.png",
     alt: "Google Cybersecurity Certificate",
     title: "Google Cybersecurity Professional Certificate",
     year: "2024",
