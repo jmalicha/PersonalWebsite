@@ -491,7 +491,7 @@ function App() {
       {/* Blog 1 */}
       <div className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
         <img
-          src="src/images/deepfake.jpg"
+          src="/deepfake.jpg"
           alt="Deepfake Detection"
           className="w-full h-48 object-cover"
         />
@@ -512,7 +512,7 @@ function App() {
       {/* Blog 2 */}
       <div className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
         <img
-          src="src/images/cyber-threats.jpeg"
+          src="/cyber-threats.jpeg"
           alt="Cyber Threat Trends"
           className="w-full h-48 object-cover"
         />
@@ -533,7 +533,7 @@ function App() {
       {/* Blog 3 */}
       <div className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
         <img
-          src="src/images/AI:ML.jpeg"
+          src="/AI.jpeg"
           alt="Machine Learning Ethics"
           className="w-full h-48 object-cover"
         />

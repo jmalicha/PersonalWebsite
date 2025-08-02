@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Mail, Linkedin, Twitter, Github } from "lucide-react";
+import { Mail, Linkedin, Twitter, Github, X, GithubIcon } from "lucide-react";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -69,14 +69,14 @@ function ContactForm() {
 
           {/* Social Icons - FIXED to stay at bottom */}
           <div className="mt-auto flex space-x-4 pt-8">
-            <a href="#" className="text-gray-400 hover:text-green-400 transition duration-300">
+            <a href="https://www.linkedin.com/in/joyce-malicha/" className="text-gray-400 hover:text-green-400 transition duration-300">
               <Linkedin size={24} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-green-400 transition duration-300">
-              <Twitter size={24} />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-green-400 transition duration-300">
-              <Github size={24} />
+            {/* <a href="" className="text-gray-400 hover:text-green-400 transition duration-300">
+              <X size={24} />
+            </a> */}
+            <a href="https://github.com/jmalicha" className="text-gray-400 hover:text-green-400 transition duration-300">
+              <GithubIcon size={24} />
             </a>
           </div>
         </div>
