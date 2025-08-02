@@ -37,7 +37,7 @@ Skills: Python, MQTT, Docker, Docker Compose, InfluxDB, Grafana, end-to-end IoT 
       id: 2,
       title: "Credit Card Fraud Detection (Colab)",
       description: "A machine learning project to detect credit card fraud using Python and scikit-learn.",
-      image: "src/images/fraud-detection.jpg",
+      image: "/fraud-detection.jpg",
       details: `This collaborative project was completed with my classmates to build a fraud detection model.
 
 We used a real-world dataset to identify fraudulent transactions using machine learning algorithms.
