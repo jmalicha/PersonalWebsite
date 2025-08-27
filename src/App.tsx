@@ -135,7 +135,7 @@ function App() {
               <div className="text-white">I'M JOYCE MALICHA</div>
             </div>
             <div className="text-xl text-gray-300 mb-8">
-            CYBERSECURITY & AI SPECIALIST
+            AI/ML Security | AI Ops | Automation | Cybersecurity | Pen Testing | Secure Systems Architect
             </div>
             <p className="text-gray-400 mb-10">
             Curiosity fuels my passion for technology, driving me to 
